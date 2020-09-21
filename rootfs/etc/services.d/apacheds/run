@@ -1,0 +1,11 @@
+#!/usr/bin/execlineb -P
+with-contenv
+s6-setuidgid apacheds
+/opt/java/openjdk/bin/java
+-Dapacheds.controls=
+-Dapacheds.extendedOperations=
+-Dapacheds.intermediateResponses=
+-Dlog4j.configuration=file:/data/conf/log4j.properties
+-Dapacheds.shutdown.port=0
+-Dapacheds.log.dir=/data/log
+-classpath /apacheds/lib/apacheds-service-2.0.0.AM26.jar org.apache.directory.server.UberjarMain /data
