@@ -8,7 +8,7 @@ on:
 
 jobs:
   apacheds:
-    name: Build apacheds Images
+    name: Build Apache DS Images
 
     runs-on: ubuntu-latest
     steps:
